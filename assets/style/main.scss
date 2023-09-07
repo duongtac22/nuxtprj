@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body {
+  background: $white;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(28 / 16);
+  color: $dark;
+}
+
+.master-wrapper {
+  position: relative;
+  padding-top: 80px;
+  background-color: $color_F2F1E1;
+
+  @media (max-width: 992px) {
+    padding-top: 68px;
+  }
+}
+
+.title-32 {
+  @include font('Montserrat', 700, 32px, calc(39 / 32));
+}
+
+// section-title
+.section-title {
+  @extend .title-32;
+
+  &.orange-text {
+    color: $dark_organe;
+  }
+
+  &.white-text {
+    color: $white;
+  }
+
+  &.black-text {
+    color: $darker;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+}
